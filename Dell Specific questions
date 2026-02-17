@@ -1,0 +1,133 @@
+1. Data Structures & Algorithms (DSA)
+
+While the online assessment was likely competitive, the live round focuses on your thought process. You will be asked to share your screen or use a collaborative editor.
+
+    Common Topics: Arrays, Linked Lists, Trees (Binary Tree/BST), and String manipulation.
+
+    Sample Questions:
+
+        Linked Lists: Reverse a linked list in groups of size k or detect a cycle.
+
+        Arrays/Strings: "Two Sum," "Group Anagrams," or "Merge Intervals."
+
+        Optimization: Finding the kth largest element in a stream (Heaps) or sorting an "almost sorted" array.
+
+    Tip: Don’t just jump into code. Explain your brute-force approach first, then optimize for time complexity, such as moving from O(n2) to O(nlogn).
+
+2. Core CS Fundamentals & Resume Deep-Dive
+
+Since this is an SDE-2 role, Dell places significant weight on how well you understand the "why" behind the code.
+
+    Operating Systems (OS): * What is the difference between a Process and a Thread?
+
+        Explain Multithreading and how to avoid Deadlocks.
+
+        What are Mutexes and Semaphores?
+
+    Object-Oriented Programming (OOP): * Explain the 4 pillars (Inheritance, Polymorphism, Encapsulation, Abstraction).
+
+        Real-world examples of Interfaces vs. Abstract Classes.
+
+    Database Management (DBMS): * Explain Indexing and how it improves query performance.
+
+        Differences between SQL and NoSQL for specific use cases.
+
+    Networking: Basics of the OSI Model or the difference between TCP and UDP.
+
+3. System Design & Projects
+
+At the SDE-2 level, you are expected to think about the bigger picture.
+
+    Low-Level Design (LLD): You might be asked to design a basic system like a Parking Lot or a Library Management System using OOP principles.
+
+    Project Discussion: Be ready to defend every line of your resume.
+
+        "What was the most challenging technical hurdle in [Project X]?"
+
+        "Why did you choose this specific tech stack over another?"
+
+        "How did you handle scalability or security in your previous role?"
+
+4. Behavioral / "Dell Culture" Questions
+
+Dell often mixes technical and behavioral questions to see if you are a "culture fit."
+
+    "Tell me about a time you had a conflict with a teammate. How did you resolve it?"
+
+    "How do you approach learning a new technology under a tight deadline?"
+
+    "Why Dell?" (Research their focus on Multi-cloud, Edge computing, or Sustainability).
+
+Quick Checklist for your Google Meet Interview:
+
+    Environment: Ensure a stable internet connection and a quiet background.
+
+    ID Check: Have your photo ID ready, as recruiters sometimes ask to see it at the start.
+
+    Communication: Think out loud. If you are silent for 30 seconds, the interviewer cannot help you or understand your logic.
+
+    Questions for them: Always have 2-3 questions ready for the end (e.g., "What does a typical sprint look like for this team?" or "How does Dell support internal mobility for engineers?").
+
+1. Low-Level Design (LLD) / Machine Coding
+
+For an SDE-2 role, Dell often focuses on your ability to translate requirements into clean, object-oriented code. You might not be asked to write a full application, but you will likely be asked to design the class structure and define relationships.
+Common LLD Problems:
+
+    Design a Parking Lot: This is a classic. You’ll need to handle different vehicle types (Car, Bike, Truck), multiple floors, and a flexible pricing strategy (e.g., flat rate vs. hourly).
+
+    Library Management System: Focus on the Book and BookItem distinction (one book can have many physical copies), member roles (Librarian vs. Member), and fine calculation logic.
+
+    Vending Machine: You'll likely need to implement the State Design Pattern (e.g., Idle, Waiting for Money, Dispensing, Out of Stock).
+
+Key Patterns to Mention:
+Pattern	Why it matters at Dell
+Singleton	Ensuring a single instance of a DatabaseConnection or ParkingLotManager.
+Strategy	For different pricing or payment methods (Credit Card vs. Dell Pay).
+Observer	To notify users when a book becomes available or a parking spot opens.
+Factory	For creating different types of Vehicle or User objects without exposing creation logic.
+2. High-Level Design (HLD)
+
+Since Dell is a leader in infrastructure and cloud solutions, they care about how you handle distributed systems and reliability.
+
+    URL Shortener (TinyURL): Focus on how you generate unique keys (Base62 encoding) and how you handle read-heavy traffic using a cache like Redis.
+
+    Rate Limiter: How would you prevent a specific client from overwhelming your API? Discuss the Token Bucket or Leaky Bucket algorithms.
+
+    Scalability Questions: * "How do you scale a system from 100 users to 1 million?" (Horizontal vs. Vertical scaling).
+
+        "What is the CAP Theorem, and which side would you pick for a banking system vs. a social media feed?"
+
+3. Technical Deep-Dive (Fundamentals)
+
+Expect questions that test your "seniority" in understanding the environment your code runs in:
+
+    Java/Spring Boot (Common at Dell):
+
+        Explain the lifecycle of a Spring Bean.
+
+        How does the ConcurrentHashMap work internally? Why is it better than a synchronized map?
+
+        What are Microservices, and how do they communicate (REST vs. gRPC vs. Message Queues like Kafka)?
+
+    Databases:
+
+        When would you use an Index? What are the downsides (write latency)?
+
+        What is Database Sharding and how do you handle "Hot Keys"?
+
+    Concurrency:
+
+        Explain Optimistic vs. Pessimistic locking.
+
+        How do you handle a "Race Condition" in a distributed environment (e.g., two people booking the last flight seat simultaneously)?
+
+4. Dell-Specific Context
+
+Dell is heavily invested in Edge Computing and Multi-Cloud. If you can casually mention how your design handles latency for users at the "edge" or how you ensure data consistency across multiple cloud providers, you will stand out significantly.
+Pro-Tip: The "STAR" Method for Projects
+
+When they ask about your past work, use the Situation, Task, Action, Result format.
+
+    Bad answer: "I fixed a bug in the payment gateway."
+
+    Good answer: "Our payment gateway was failing under high load (Situation). I analyzed the logs and found a database deadlock (Task). I implemented a retry mechanism with exponential backoff and optimized the SQL query (Action), which reduced failure rates by 25% (Result)."
